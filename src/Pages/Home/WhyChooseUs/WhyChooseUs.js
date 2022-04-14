@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
                 itaque iusto.
             </p>
             <div className="grid md:grid-cols-3 gap-x-10 gap-y-3">
-                {chooseUs.map(item => {
+                {chooseUs.map((item, index) => {
                     const { category, des, img, logo } = item
                     return (
                         <div>

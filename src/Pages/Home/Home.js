@@ -14,7 +14,7 @@ const Home = () => {
                         type="text"
                         placeholder="Search food items"
                     />
-                    <button className="text-sm text-white  bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-28 md:right-[140px]">
+                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-28 md:right-[140px]">
                         Search
                     </button>
                 </div>
@@ -41,7 +41,7 @@ const Home = () => {
                 </NavLink>
             </div>
             <Outlet />
-            <button className="text-sm text-white bg-red-500 px-5 py-1 md:py-2 rounded block mx-auto mb-5">
+            <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded block mx-auto mb-5">
                 Checkout your food
             </button>
             <WhyChooseUs />
