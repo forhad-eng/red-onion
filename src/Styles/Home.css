@@ -1,0 +1,13 @@
+.home-banner {
+    background: url('../images/bannerbackground.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 115px);
+}
+
+@media only screen and (max-width: 576px) {
+    .home-banner {
+        height: 350px;
+    }
+}
