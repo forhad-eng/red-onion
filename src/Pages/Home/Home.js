@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import WhyChooseUs from '../../Pages/Home/WhyChooseUs/WhyChooseUs'
 import '../../Styles/Home.css'
-import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
 
 const Home = () => {
     return (
