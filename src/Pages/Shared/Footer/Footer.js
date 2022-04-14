@@ -6,7 +6,7 @@ const Footer = () => {
     const today = new Date()
     const year = today.getFullYear()
     return (
-        <footer className="px-14 py-10 bg-[#222412]">
+        <footer className="mt-10 px-14 py-10 bg-[#222412]">
             <div className="grid md:grid-cols-2 gap-5 mt-5">
                 <img width="150px" src={logo} alt="" />
                 <div className="grid md:grid-cols-2 gap-y-5 text-white text-sm leading-7 ">
@@ -24,11 +24,11 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-5 md:mt-24">
-                <p>
-                    <small className="text-gray-400">Copyright &copy; {year} red onion</small>
+            <div className="grid md:grid-cols-2 gap-5 mt-10 md:mt-24">
+                <p className="text-center md:text-left">
+                    <small className="text-gray-400">Copyright &copy; {year} RED ONION</small>
                 </p>
-                <div className="flex gap-8 px-32 text-sm text-white">
+                <div className="flex justify-center gap-8 text-sm text-white">
                     <Link to="/">Privacy Policy</Link>
                     <Link to="/">Terms of Use</Link>
                     <Link to="/">Pricing</Link>
