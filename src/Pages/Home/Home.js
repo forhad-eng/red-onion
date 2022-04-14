@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import '../../Styles/Home.css'
+import WhyChooseUs from './WhyChooseUs/WhyChooseUs'
 
 const Home = () => {
     return (
@@ -40,6 +41,10 @@ const Home = () => {
                 </NavLink>
             </div>
             <Outlet />
+            <button className="text-sm text-white bg-red-500 px-5 py-1 md:py-2 rounded block mx-auto mb-5">
+                Checkout your food
+            </button>
+            <WhyChooseUs />
         </div>
     )
 }
