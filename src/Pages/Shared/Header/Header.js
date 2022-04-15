@@ -25,10 +25,14 @@ const Header = () => {
                         <span className="cart-counter">{quantity}</span>
                     </div>
                 </Link>
-                <button className="text-sm font-semibold outline-none tracking-wide">Login</button>
-                <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full">
-                    Sign up
-                </button>
+                <Link to="/login">
+                    <button className="text-sm font-semibold outline-none tracking-wide">Login</button>
+                </Link>
+                <Link to="/signup">
+                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full">
+                        Sign up
+                    </button>
+                </Link>
             </div>
         </nav>
     )
