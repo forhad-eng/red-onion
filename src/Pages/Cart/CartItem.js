@@ -39,18 +39,18 @@ const CartItem = ({ item }) => {
                     <p className="text-sm text-gray-500">Delivery free</p>
                 </div>
             </div>
-            <div className="ml-auto flex items-center gap-5">
+            <div className="ml-auto flex items-center gap-4">
                 <button
-                    className="outline-none mr-2 text-2xl"
+                    className="outline-none mr-1 text-2xl"
                     onClick={() => {
                         quantity > 1 && setUpdateQuantity({ value: updateQuantity.value - 1, id: id })
                     }}
                 >
                     -
                 </button>
-                <p>{updateQuantity.value}</p>
+                <p className="bg-white p-2 rounded-lg text-sm font-semibold">{updateQuantity.value}</p>
                 <button
-                    className="outline-none ml-2 text-2xl"
+                    className="outline-none ml-1 text-2xl"
                     onClick={() => setUpdateQuantity({ value: updateQuantity.value + 1, id: id })}
                 >
                     +

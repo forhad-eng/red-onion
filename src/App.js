@@ -3,15 +3,18 @@ import { Route, Routes } from 'react-router-dom'
 import useCart from './hooks/useCart'
 import useFood from './hooks/useFood'
 import Cart from './Pages/Cart/Cart'
+import CheckOut from './Pages/CheckOut/CheckOut'
 import BreakFast from './Pages/Home/BreakFast/BreakFast'
 import Dinner from './Pages/Home/Dinner/Dinner'
 import FoodDetails from './Pages/Home/FoodDetails/FoodDetails'
 import Home from './Pages/Home/Home'
 import Lunch from './Pages/Home/Lunch/Lunch'
 import Login from './Pages/Login/Login/Login'
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth'
 import SignUp from './Pages/Login/SignUp/SignUp'
 import Footer from './Pages/Shared/Footer/Footer'
 import Header from './Pages/Shared/Header/Header'
+
 export const CartContext = createContext()
 
 function App() {
@@ -33,6 +36,14 @@ function App() {
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/signup" element={<SignUp />} />
                     <Route path="/login" element={<Login />} />
+                    <Route
+                        path="/checkout"
+                        element={
+                            <RequireAuth>
+                                <CheckOut />
+                            </RequireAuth>
+                        }
+                    />
                 </Routes>
                 <Footer />
             </CartContext.Provider>

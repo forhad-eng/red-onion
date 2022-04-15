@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../App'
 import CartItem from './CartItem'
 
@@ -78,9 +79,11 @@ const Cart = () => {
                             <p>${(subTotal + subTotal * 0.15).toFixed(2)}</p>
                         </div>
                     </div>
-                    <button className="text-sm text-white outline-none bg-red-500 w-2/3 block mx-auto px-10 py-1 md:py-3 rounded">
-                        Place Order
-                    </button>
+                    <Link to="/checkout">
+                        <button className="text-sm text-white outline-none bg-red-500 w-2/3 block mx-auto px-10 py-1 md:py-3 rounded">
+                            Place Order
+                        </button>
+                    </Link>
                 </div>
             )}
         </div>
