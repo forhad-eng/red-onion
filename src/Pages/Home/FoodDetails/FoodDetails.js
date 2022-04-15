@@ -1,13 +1,25 @@
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { CartContext } from '../../../App'
 import useFood from '../../../hooks/useFood'
+import { addToCart } from '../../../utilities/fakedb'
 import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner'
 
 const FoodDetails = () => {
     const [increase, setIncrease] = useState(1)
     const [foods] = useFood()
     const { id } = useParams()
-    const selected = foods.find(food => food.id === +id)
+    const { cart, setCart } = useContext(CartContext)
+    let selected = foods.find(food => food.id === +id)
+
+    useEffect(() => {
+        if (selected) {
+            selected.quantity = increase
+            const rest = cart.filter(item => item.id !== +id)
+            addToCart(selected?.id, increase)
+            setCart([...rest, selected])
+        }
+    }, [increase])
 
     return (
         <>
