@@ -13,15 +13,6 @@ const FoodDetails = () => {
     const rest = cart.filter(item => item.id !== +id)
     let selected = foods.find(food => food.id === +id)
 
-    // useEffect(() => {
-    //     if (selected) {
-    //         selected.quantity = increase
-    //         const rest = cart.filter(item => item.id !== +id)
-    //         addToCart(selected?.id, increase)
-    //         setCart([...rest, selected])
-    //     }
-    // }, [increase])
-
     const addToCartHandler = () => {
         let targetItem = {}
         targetItem = cart.find(item => item.id === +id)

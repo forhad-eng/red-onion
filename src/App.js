@@ -2,6 +2,7 @@ import { createContext } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import useCart from './hooks/useCart'
 import useFood from './hooks/useFood'
+import Cart from './Pages/Cart/Cart'
 import BreakFast from './Pages/Home/BreakFast/BreakFast'
 import Dinner from './Pages/Home/Dinner/Dinner'
 import FoodDetails from './Pages/Home/FoodDetails/FoodDetails'
@@ -27,6 +28,7 @@ function App() {
                         <Route path="dinner" element={<Dinner />} />
                     </Route>
                     <Route path="/food-deatils/:id" element={<FoodDetails />} />
+                    <Route path="/cart" element={<Cart />} />
                 </Routes>
                 <Footer />
             </CartContext.Provider>

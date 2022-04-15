@@ -19,10 +19,10 @@ const Header = () => {
                 <img src={logo} alt="" />
             </Link>
             <div className="flex items-center gap-3 md:gap-5">
-                <Link to="/">
-                    <div class="cart-box">
+                <Link to="/cart">
+                    <div className="cart-box">
                         <ShoppingCartIcon className="h-6 w-6" />
-                        <span class="cart-counter">{quantity}</span>
+                        <span className="cart-counter">{quantity}</span>
                     </div>
                 </Link>
                 <button className="text-sm font-semibold outline-none tracking-wide">Login</button>

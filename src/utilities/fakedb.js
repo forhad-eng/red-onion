@@ -19,4 +19,12 @@ const getCart = () => {
     return storedCart
 }
 
-export { addToCart, getCart }
+const removeItem = productID => {
+    let storedCart = JSON.parse(localStorage.getItem('onion-cart'))
+    if (productID in storedCart) {
+        delete storedCart[productID]
+        localStorage.setItem('onion-cart', JSON.stringify(storedCart))
+    }
+}
+
+export { addToCart, getCart, removeItem }
