@@ -1,3 +1,4 @@
+import { ShoppingCartIcon } from '@heroicons/react/solid'
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../../App'
@@ -18,7 +19,12 @@ const Header = () => {
                 <img src={logo} alt="" />
             </Link>
             <div className="flex items-center gap-3 md:gap-5">
-                <span>🛒{quantity}</span>
+                <Link to="/">
+                    <div class="cart-box">
+                        <ShoppingCartIcon className="h-6 w-6" />
+                        <span class="cart-counter">{quantity}</span>
+                    </div>
+                </Link>
                 <button className="text-sm font-semibold outline-none tracking-wide">Login</button>
                 <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full">
                     Sign up

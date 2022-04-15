@@ -1,3 +1,24 @@
 nav img {
     height: 35px;
 }
+
+.cart-box {
+    position: relative;
+}
+
+.cart-counter {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    transform: translate(0%, -50%);
+    font-size: 13px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+}
