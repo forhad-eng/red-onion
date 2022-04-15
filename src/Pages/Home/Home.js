@@ -8,13 +8,13 @@ const Home = () => {
         <div>
             <div className="home-banner">
                 <p className="text-2xl md:text-5xl text-center pt-28 md:pt-36 mb-5">Best food is awaiting you</p>
-                <div className="w-full md:w-1/2 mx-auto flex justify-center items-center relative">
+                <div className="w-3/4 md:w-1/2 mx-auto flex justify-center items-center relative">
                     <input
                         className="rounded-full outline-none py-1 pl-4 mr-12 md:mr-16 md:py-2 md:pl-5 md:pr-32"
                         type="text"
                         placeholder="Search food items"
                     />
-                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-16 md:right-[40px] lg:right-[90px] xl:right-[140px]">
+                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-2 md:right-[40px] lg:right-[90px] xl:right-[140px]">
                         Search
                     </button>
                 </div>

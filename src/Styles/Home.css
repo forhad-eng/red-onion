@@ -11,3 +11,9 @@
         height: 350px;
     }
 }
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .home-banner {
+        height: 500px;
+    }
+}
