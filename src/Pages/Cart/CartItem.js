@@ -17,9 +17,9 @@ const CartItem = ({ item }) => {
         const indexNo = cart.indexOf(targetItem)
         if (targetItem) {
             targetItem.quantity = updateQuantity.value
-            addToCart(targetItem.id, targetItem.quantity)
             newCart[indexNo] = targetItem
             setCart(newCart)
+            addToCart(targetItem.id, targetItem.quantity)
         }
     }, [updateQuantity])
 

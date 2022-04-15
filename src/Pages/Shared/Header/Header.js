@@ -1,12 +1,17 @@
 import { ShoppingCartIcon } from '@heroicons/react/solid'
+import { signOut } from 'firebase/auth'
 import React, { useContext } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../../../App'
+import { auth } from '../../../Firebase/firebase.init'
 import logo from '../../../images/logo2.png'
 import '../../../Styles/Header.css'
 
 const Header = () => {
+    const [user] = useAuthState(auth)
     const { cart } = useContext(CartContext)
+
     let quantity = 0
 
     for (const item of cart) {
@@ -25,14 +30,23 @@ const Header = () => {
                         <span className="cart-counter">{quantity}</span>
                     </div>
                 </Link>
-                <Link to="/login">
-                    <button className="text-sm font-semibold outline-none tracking-wide">Login</button>
-                </Link>
-                <Link to="/signup">
-                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full">
-                        Sign up
+                {user ? (
+                    <button onClick={() => signOut(auth)} className="text-sm font-semibold outline-none tracking-wide">
+                        <span className="mr-3">{user.displayName}</span> Logout
                     </button>
-                </Link>
+                ) : (
+                    <>
+                        <Link to="/login">
+                            <button className="text-sm font-semibold outline-none tracking-wide">Login</button>
+                        </Link>
+
+                        <Link to="/signup">
+                            <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full">
+                                Sign up
+                            </button>
+                        </Link>
+                    </>
+                )}
             </div>
         </nav>
     )
