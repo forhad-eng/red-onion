@@ -14,7 +14,7 @@ const Home = () => {
                         type="text"
                         placeholder="Search food items"
                     />
-                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-28 md:right-[140px]">
+                    <button className="text-sm text-white outline-none bg-red-500 px-5 py-1 md:py-2 rounded-full absolute right-16 md:right-[40px] lg:right-[90px] xl:right-[140px]">
                         Search
                     </button>
                 </div>

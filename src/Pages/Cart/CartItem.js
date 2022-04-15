@@ -30,7 +30,7 @@ const CartItem = ({ item }) => {
     }
 
     return (
-        <div className="grid grid-cols-2 px-6 p-3 bg-gray-100 rounded-2xl">
+        <div className="grid md:grid-cols-2 gap-5 md:gap-0 px-6 p-3 bg-gray-100 rounded-2xl">
             <div className="cart-item flex justify-around">
                 <img height={'30'} src={img} alt="" />
                 <div>
@@ -39,7 +39,7 @@ const CartItem = ({ item }) => {
                     <p className="text-sm text-gray-500">Delivery free</p>
                 </div>
             </div>
-            <div className="ml-auto flex items-center gap-4">
+            <div className="md:ml-auto flex justify-center items-center gap-6 md:gap-4">
                 <button
                     className="outline-none mr-1 text-2xl"
                     onClick={() => {

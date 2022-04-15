@@ -59,7 +59,7 @@ const Cart = () => {
                     <p className="text-center text-xl pb-2 border-b-2 border-gray-300 mx-24 md:mx-32 mb-5">
                         Review your cart
                     </p>
-                    <div className="grid grid-cols-1 gap-3 px-10 mx-auto">
+                    <div className="grid grid-cols-1 gap-3 px-8 md:px-10 mx-auto">
                         {cart.map(item => (
                             <CartItem key={item.id} item={item} />
                         ))}
