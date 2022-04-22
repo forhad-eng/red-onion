@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../../../images/logo.png'
+import Map from '../Map/Map'
 
 const Footer = () => {
     const today = new Date()
     const year = today.getFullYear()
     return (
         <footer className="mt-10 px-14 py-10 bg-[#222412]">
-            <div className="grid md:grid-cols-2 gap-5 mt-5">
+            <div className="grid lg:grid-cols-3 gap-5 mt-5">
                 <img width="150px" src={logo} alt="" />
                 <div className="grid md:grid-cols-2 gap-y-5 text-white text-sm leading-7 ">
                     <div className="flex flex-col">
@@ -23,8 +24,12 @@ const Footer = () => {
                         <Link to="/">Restaurant near me</Link>
                     </div>
                 </div>
+                <div>
+                    <p className="text-white text-sm ml-5">Find Us On Map</p>
+                    <Map />
+                </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-5 mt-10 md:mt-24">
+            <div className="grid md:grid-cols-2 gap-5 mt-10 md:mt-8">
                 <p className="text-center md:text-left">
                     <small className="text-gray-400">Copyright &copy; {year} RED ONION</small>
                 </p>
